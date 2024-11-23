@@ -1,7 +1,7 @@
 class User {
   #name;
   #password;
-  //static prop 
+  //static prop  เป็ฯการเข้าถึง prop หรือ method ผ่าน class
   static type = "ผู้ใช้งานระบบ";
   constructor(n, p) {
     this.#name = n;

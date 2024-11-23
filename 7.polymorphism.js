@@ -1,19 +1,18 @@
 class User {
-  //Access Modifier-Protected สืบทอด prop ให้ลูกได้
-  _name;
+  #name;
   #password;
   constructor(n, p) {
-    this._name = n;
+    this.#name = n;
     this.#password = p;
   }
   showDetail() {
-    console.log(`ชื่อผู้ใช้ ${this._name}, รหัสผ่าน ${this.#password}`);
+    console.log(`ชื่อผู้ใช้ ${this.#name}, รหัสผ่าน ${this.#password}`);
   }
   set Name(newName) {
-    this._name = newName;
+    this.#name = newName;
   }
   get Name() {
-    return this._name;
+    return this.#name;
   }
   static showType() {
     console.log("ฉันเป็นผู้เข้าใช้งานระบบ");
@@ -25,9 +24,9 @@ class Teacher extends User {
     super(n, p);
     this.#course = c;
   }
-  //สร้าง overriding method เป็นการสร้าง method ชื่อเหมือน super class แต่การทำงานด้านในแตกต่างกัน
+  //สร้าง overriding method เป็นการสร้าง method ชื่อเหมือน super class แต่การทำงานด้านในแตกต่างกัน ถ้าไม่สร้างก็จะเป็นการใช้ method ของ super class
   showDetail() {
-    console.log(this._name + this.#course);
+    console.log("ฉันเป็นครู สอนวิชา" + this.#course);
   }
 }
 
@@ -38,7 +37,7 @@ class Student extends User {
     this.#score = s;
   }
   showDetail() {
-    console.log(this._name + this.#score);
+    console.log("ฉันเป็นนักเรียน สอบได้" + this.#score);
   }
 }
 

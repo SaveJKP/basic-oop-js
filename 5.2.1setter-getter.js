@@ -8,7 +8,7 @@ class User {
   showDetail() {
     console.log(`ชื่อผู้ใช้ ${this.#name}, รหัสผ่าน ${this.#password}`);
   }
-  //method-setter
+  //method-setter ไม่จำเป็นต้องมีชื่อฟังก์ชัน setter getter
   setName(newName){
     this.#name = newName;
   }
