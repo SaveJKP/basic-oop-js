@@ -1,9 +1,9 @@
 class User {
   name = "save";
   password = 1234;
-  //parameter constructor ใช้เพื่อกำหนดค่าเริ่มต้น property ให้แก่ object แต่ละตัว
+  //parameter constructor ใช้เพื่อกำหนดค่า property ให้แก่ object แต่ละตัว
   constructor(n,p) {
-    this.name = n; //this อ้างอิงไปที่ property 
+    this.name = n; //this อ้างอิงไปที่ property เพื่อทำการเปลี่ยนค่า default ของ prop
     this.password = p;
   }
 }

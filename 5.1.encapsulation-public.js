@@ -1,5 +1,5 @@
 class User {
-  //Access Modifier-Public
+  //Access Modifier-Public แบบ default
   name = "save";
   password = 1234;
   constructor(n, p) {

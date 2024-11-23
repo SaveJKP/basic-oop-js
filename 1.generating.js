@@ -1,6 +1,6 @@
 //สร้าง class
 class User {
-  // เก็บ property
+  // เก็บ property + ให้ค่า default
   name = "Sav";
   password = 1234;
 }
