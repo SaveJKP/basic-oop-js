@@ -1,5 +1,5 @@
 class User {
-  //Access Modifier-Protected สืบทอด prop ให้ลูกได้
+  //Access modifier Protected สืบทอด prop ให้ลูกได้
   _name;
   #password;
   constructor(n, p) {
@@ -9,15 +9,6 @@ class User {
   showDetail() {
     console.log(`ชื่อผู้ใช้ ${this._name}, รหัสผ่าน ${this.#password}`);
   }
-  set Name(newName) {
-    this._name = newName;
-  }
-  get Name() {
-    return this._name;
-  }
-  static showType() {
-    console.log("ฉันเป็นผู้เข้าใช้งานระบบ");
-  }
 }
 class Teacher extends User {
   #course;
@@ -25,8 +16,9 @@ class Teacher extends User {
     super(n, p);
     this.#course = c;
   }
+  //สร้าง overriding method เป็นการสร้าง method ชื่อเหมือน super class แต่การทำงานด้านในแตกต่างกัน ถ้าไม่สร้างก็จะเป็นการใช้ method ของ super class
   showDetail() {
-    console.log(this._name + this.#course);
+    console.log("ฉันเป็นครู"+this._name + "สอนวิชา" + this.#course);
   }
 }
 
@@ -37,7 +29,7 @@ class Student extends User {
     this.#score = s;
   }
   showDetail() {
-    console.log(this._name + this.#score);
+    console.log("ฉันเป็นนักเรียน" + this._name + "สอบได้" + this.#score);
   }
 }
 

@@ -25,8 +25,8 @@ class Teacher extends User {
 class Student extends User {
 }
 //เรียกใช้ costructor จาก teacher
-const user1 = new Teacher();
+const user1 = new Teacher("teacher",1234);
 user1.showDetail();
 //เรียกใช้ constructor จาก student
-const user2 = new Student();
+const user2 = new Student("student",1234);
 user2.showDetail();
